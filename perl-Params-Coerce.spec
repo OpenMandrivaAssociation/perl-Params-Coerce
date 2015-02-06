@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	4
 
 Summary:	Allows your classes to do coercion of parameters
 License:	GPL+ or Artistic
