@@ -1,15 +1,13 @@
 %define upstream_name    Params-Coerce
-%define upstream_version 0.15
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.15
+Release:	2
 
 Summary:	Allows your classes to do coercion of parameters
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/karenetheridge/Params-Coerce
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Params-Coerce-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Params-Coerce-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -34,7 +32,7 @@ What is Coercion
     need.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -55,9 +53,7 @@ make test
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.140.0-1mdv2010.0
 + Revision: 404282
-- rebuild using %%perl_convert_version
-
-* Sun Jul 13 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.14-1mdv2009.0
+- rebuild using %0.15 Sun Jul 13 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.14-1mdv2009.0
 + Revision: 234303
 - import perl-Params-Coerce
 
